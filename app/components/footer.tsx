@@ -17,8 +17,8 @@ export default function Footer() {
             className="origin-center duration-200 ease-in-out hover:scale-110 "
           >
             <Image
-              width={30}
-              height={30}
+              width={26}
+              height={26}
               src="/linkedin.png"
               alt="linkedin icon"
             />
@@ -27,7 +27,7 @@ export default function Footer() {
             href={"https://github.com/thayanemenezes"}
             className="origin-center duration-200 ease-in-out hover:scale-110"
           >
-            <Image width={30} height={30} src="/github.png" alt="github icon" />
+            <Image width={26} height={26} src="/github.png" alt="github icon" />
           </Link>
         </div>
       </div>
