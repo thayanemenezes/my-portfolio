@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -15,13 +16,18 @@ export default function Footer() {
             href={"https://www.linkedin.com/in/thayane-menezes-31a5a9191/"}
             className="origin-center duration-200 ease-in-out hover:scale-110 "
           >
-            <img width={"40px"} src="/linkedin.png" alt="linkedin icon" />
+            <Image
+              width={30}
+              height={30}
+              src="/linkedin.png"
+              alt="linkedin icon"
+            />
           </Link>
           <Link
             href={"https://github.com/thayanemenezes"}
             className="origin-center duration-200 ease-in-out hover:scale-110"
           >
-            <img width={"40px"} src="/github.png" alt="github icon" />
+            <Image width={30} height={30} src="/github.png" alt="github icon" />
           </Link>
         </div>
       </div>

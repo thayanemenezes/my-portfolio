@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Projects() {
@@ -5,7 +6,9 @@ export default function Projects() {
     <div className="grid md:grid-cols-2 sm:grid-cols-1 py-40 gap-10">
       <div>
         <div className="bg-gray-200 py-10 cursor-pointer">
-          <img
+          <Image
+            width={650}
+            height={650}
             className="origin-center duration-200 ease-in-out hover:scale-110"
             src="/s4f.png"
             alt="s4f mockup"
@@ -16,7 +19,9 @@ export default function Projects() {
       </div>
       <div>
         <div className="bg-gray-200 py-10 cursor-pointer">
-          <img
+          <Image
+            width={650}
+            height={650}
             className="origin-center duration-200 ease-in-out hover:scale-110"
             src="/solution4fleet.png"
             alt="solution mockup"
