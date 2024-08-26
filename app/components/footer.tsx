@@ -11,7 +11,7 @@ export default function Footer() {
           <h2 className="text-gray-900">Get in touch! 👋</h2>
           <h4 className="text-gray-900 ">thayanemenezes.dev@gmail.com</h4>
         </div>
-        <div className="flex flex-row w-32 justify-between items-center mt-5">
+        <div className="flex flex-row w-20 justify-between items-center mt-5">
           <Link
             href={"https://www.linkedin.com/in/thayane-menezes-31a5a9191/"}
             className="origin-center duration-200 ease-in-out hover:scale-110 "
