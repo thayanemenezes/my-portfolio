@@ -71,9 +71,7 @@ export default function About() {
             </ul>
           </div>
           <div className="py-5">
-            <h3 className="text-gray-800">
-              Fullstack Developer - Cartão Vai Bem
-            </h3>
+            <h3 className="text-gray-800">Fullstack Developer - Vai Bem</h3>
             <ul className="text-gray-800 list-disc w-11/12 m-auto mt-3">
               <li>
                 Website development with ReactJS, NextJS, Styled Components,
