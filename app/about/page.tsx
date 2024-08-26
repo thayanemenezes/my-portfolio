@@ -21,8 +21,8 @@ export default function About() {
               developer. In May 2021, I got this opportunity, and since then I
               have been focused on deepening my knowledge on the front end with
               ReactJS and Next.Js, and on the backend with NodeJs and NestJs.
-              But on my journey, I've had the opportunity to work with several
-              languages, such as Python, Dart, C++.{" "}
+              But on my journey, I&apos;ve had the opportunity to work with
+              several languages, such as Python, Dart, C++.{" "}
             </p>
             <p>
               Last year, I had the opportunity to lead a squad of three people,
@@ -39,7 +39,7 @@ export default function About() {
           <hr />
           <div className="py-5">
             <h3 className="text-gray-800">
-              Bachelor's Degree in Computer Science
+              Bachelor&apos;s Degree in Computer Science
             </h3>
             <h5 className="text-gray-800">2020 - 2024</h5>
           </div>
