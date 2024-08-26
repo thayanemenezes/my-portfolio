@@ -94,8 +94,10 @@ export default function About() {
           <div className="py-5">
             <h3 className="text-gray-800">Web Designer - Delfa</h3>
             <ul className="text-gray-800 list-disc w-11/12 m-auto mt-3">
-              <li>E-commerce management on the Tray platform</li>
-              <li>Creation of Landing Pages with HTMLS, CSS3 and JavaScript</li>
+              <li>E-commerce management on the Tray platform;</li>
+              <li>
+                Creation of Landing Pages with HTMLS, CSS3 and JavaScript;
+              </li>
             </ul>
           </div>
           <div className="py-5">
@@ -105,9 +107,9 @@ export default function About() {
             <ul className="text-gray-800 list-disc w-11/12 m-auto mt-3">
               <li>
                 Web application development using HTML, CSS3, JavaScript and
-                Bootstrap
+                Bootstrap;
               </li>
-              <li>Image editing and graphic design</li>
+              <li>Image editing and graphic design;</li>
             </ul>
           </div>
         </div>
