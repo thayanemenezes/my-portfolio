@@ -8,8 +8,12 @@ export default function About() {
       <NavHeader />
       <main>
         <div className="py-20 flex flex-col lg:flex-row gap-5">
-          <div className="lg:w-1/2 sm:w-full h-100 order-2 lg:order-1 bg-gray-300">
-            {/* <img src="/me.jpg" alt="about me" /> */}
+          <div className="lg:w-1/2 sm:w-full h-100 order-2 lg:order-1 flex">
+            <img
+              className="align-baseline object-cover"
+              src="/me.png"
+              alt="about me"
+            />
           </div>
           <div className="lg:w-1/2 sm:w-full text-gray-800 lg:order-2">
             <h1 className="text-gray-800">About me</h1>
