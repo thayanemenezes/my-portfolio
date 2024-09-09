@@ -23,6 +23,19 @@ export default function Projects() {
             width={650}
             height={650}
             className="origin-center duration-200 ease-in-out hover:scale-110"
+            src="/spaceapp.png"
+            alt="space app mockup"
+          />
+        </div>
+        <h2 className="text-gray-800 mt-5">Space App</h2>
+        <h3 className="text-gray-800">Layout Development</h3>
+      </div>
+      <div>
+        <div className="bg-gray-200 py-10 cursor-pointer">
+          <Image
+            width={650}
+            height={650}
+            className="origin-center duration-200 ease-in-out hover:scale-110"
             src="/solution4fleet.png"
             alt="solution mockup"
           />
