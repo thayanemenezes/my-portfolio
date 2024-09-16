@@ -11,7 +11,7 @@ export default function About() {
           <div className="lg:w-1/2 sm:w-full h-100 order-2 lg:order-1 flex">
             <img
               className="align-baseline object-cover"
-              src="/me.png"
+              src="/me.jpeg"
               alt="about me"
             />
           </div>
