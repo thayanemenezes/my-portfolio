@@ -46,9 +46,6 @@ export const projectsData = [{
     subtitle: 'Layout Development',
     technologiesUsed: [
         {
-            icon: <FaReact size={24} color='#2DC7DF' />
-        },
-        {
             icon: <FaWordpress size={24} color='#2867C5' />
         }
     ]
