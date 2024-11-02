@@ -1,6 +1,6 @@
 import { FaReact, FaWordpress } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
-import { SiNestjs, SiJavascript, SiTypescript } from 'react-icons/si';
+import { SiNestjs, SiJavascript, SiTypescript, SiFastify } from 'react-icons/si';
 
 export const projectsData = [{
     id: 1,
@@ -65,6 +65,9 @@ export const projectsData = [{
         },
         {
             icon: <SiTypescript size={24} color='#2D9CDF' />,
+        },
+        {
+            icon: <SiFastify size={24} color='#1D1D1D' />,
         },
     ]
 }
