@@ -39,18 +39,6 @@ export const projectsData = [{
     ]
 },
 {
-    id: 3,
-    projectName: 'Solution4Fleet',
-    imagePath: '/solution4fleet.png',
-    URL: '/',
-    subtitle: 'Layout Development',
-    technologiesUsed: [
-        {
-            icon: <FaWordpress size={24} color='#2867C5' />
-        }
-    ]
-},
-{
     id: 4,
     projectName: 'In Orbit',
     imagePath: '/in-orbit.png',
