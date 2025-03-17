@@ -17,7 +17,7 @@ export default function Content() {
     if (showTypingEffect) {
       const timer = setTimeout(() => {
         setShowParagraphs(true);
-      }, 2000);
+      }, 2600);
       return () => clearTimeout(timer);
     }
   }, [showTypingEffect]);
@@ -26,13 +26,13 @@ export default function Content() {
     if (showParagraphs) {
       const timer = setTimeout(() => {
         setShowButtons(true);
-      }, 2000);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [showParagraphs]);
 
   return (
-    <div className="w-full text-center">
+    <div className="text-center">
       <div
         className={`transition-opacity duration-1000 ${
           showTypingEffect ? "opacity-100" : "opacity-0"
