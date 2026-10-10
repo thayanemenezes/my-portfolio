@@ -120,7 +120,7 @@ import { ArrowDown, ArrowRight } from '@lucide/vue'
 h1 {
   max-width: 850px;
   color: #f7f8ff;
-  font-size: clamp(3.1rem, 7.2vw, 6.4rem);
+  font-size: clamp(2.5rem, 4vw, 6.4rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 0.98;

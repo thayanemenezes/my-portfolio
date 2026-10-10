@@ -11,14 +11,10 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
         <div class="visual-frame" aria-hidden="true"></div>
         <img
           class="about-image"
-          src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg?auto=compress&cs=tinysrgb&w=1000"
+          src="../assets/thayane.png"
           alt="Profissional de tecnologia trabalhando em frente a dois monitores."
           loading="lazy"
         />
-        <div class="image-note">
-          <span class="note-label">Em uma frase</span>
-          <p>Tecnologia que aproxima pessoas e objetivos.</p>
-        </div>
       </div>
 
       <div class="about-copy">
@@ -77,10 +73,11 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
 .about-image {
   position: relative;
   width: 100%;
-  height: 440px;
+  height: 510px;
   border-radius: 6px;
   filter: saturate(0.8);
   object-fit: cover;
+  object-position: top;
 }
 
 .image-note {
