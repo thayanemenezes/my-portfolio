@@ -12,9 +12,13 @@ let camera
 let starTexture
 let prefersReducedMotion = false
 let isUnmounted = false
+let lastFrameTime = 0
+let clickTravelStartedAt = 0
+let clickTravelAppliedDistance = 0
 
 const TRAVEL_DURATION = 650
 const TRAVEL_DISTANCE = 180
+const AMBIENT_SPEED = 1.4
 
 function createStarTexture() {
   const canvas = document.createElement('canvas')
@@ -112,33 +116,36 @@ function recyclePassedStars() {
   positions.needsUpdate = true
 }
 
-function travelThroughStars(timestamp) {
+function animateScene(timestamp) {
   if (!renderer || !camera || !starField) return
 
-  const progress = Math.min((timestamp - travelStartedAt) / TRAVEL_DURATION, 1)
-  const easedProgress = (1 - Math.cos(Math.PI * progress)) / 2
-  camera.position.z = travelStartedAtZ - TRAVEL_DISTANCE * easedProgress
+  const deltaTime = lastFrameTime
+    ? Math.min((timestamp - lastFrameTime) / 1000, 0.05)
+    : 0
+  lastFrameTime = timestamp
+  camera.position.z -= AMBIENT_SPEED * deltaTime
+
+  if (clickTravelStartedAt) {
+    const progress = Math.min((timestamp - clickTravelStartedAt) / TRAVEL_DURATION, 1)
+    const easedProgress = (1 - Math.cos(Math.PI * progress)) / 2
+    const clickDistance = TRAVEL_DISTANCE * easedProgress
+    camera.position.z -= clickDistance - clickTravelAppliedDistance
+    clickTravelAppliedDistance = clickDistance
+
+    if (progress === 1) clickTravelStartedAt = 0
+  }
+
   recyclePassedStars()
   renderer.render(scene, camera)
-
-  if (progress < 1) {
-    animationFrame = window.requestAnimationFrame(travelThroughStars)
-  } else {
-    animationFrame = undefined
-  }
+  animationFrame = window.requestAnimationFrame(animateScene)
 }
-
-let travelStartedAt = 0
-let travelStartedAtZ = 0
 
 function animateStarsOnClick(event) {
   if (prefersReducedMotion || !(event.target instanceof Element)) return
   if (event.target.closest('a, button, input, textarea, select, [role="button"]')) return
 
-  window.cancelAnimationFrame(animationFrame)
-  travelStartedAt = performance.now()
-  travelStartedAtZ = camera.position.z
-  animationFrame = window.requestAnimationFrame(travelThroughStars)
+  clickTravelStartedAt = performance.now()
+  clickTravelAppliedDistance = 0
 }
 
 onMounted(async () => {
@@ -167,7 +174,11 @@ onMounted(async () => {
     prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
     window.addEventListener('resize', resizeScene)
     window.addEventListener('click', animateStarsOnClick, true)
-    renderer.render(scene, camera)
+    if (prefersReducedMotion) {
+      renderer.render(scene, camera)
+    } else {
+      animationFrame = window.requestAnimationFrame(animateScene)
+    }
   } catch (error) {
     console.error('Não foi possível iniciar o fundo de estrelas em WebGL.', error)
   }
