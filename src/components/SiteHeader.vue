@@ -85,8 +85,7 @@ onUnmounted(() => observer?.disconnect())
   z-index: 50;
   top: 3px;
   width: 100%;
-  border-bottom: 1px solid var(--color-line);
-  background: rgb(8 10 24 / 88%);
+  background: var(--color-background);
   backdrop-filter: blur(18px);
 }
 

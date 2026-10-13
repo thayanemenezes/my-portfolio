@@ -42,7 +42,7 @@ const markers = ['gold', 'blue']
 <style scoped>
 .experience-section {
   border-block: 1px solid var(--color-line);
-  background: #0c1024;
+  background: rgb(16 17 20 / 88%);
 }
 
 .section-heading {
@@ -86,9 +86,9 @@ const markers = ['gold', 'blue']
 .experience-card {
   position: relative;
   padding: clamp(22px, 4vw, 34px);
-  border: 1px solid var(--color-line);
+  
   border-radius: 8px;
-  background: linear-gradient(145deg, rgb(24 29 59 / 84%), rgb(13 16 37 / 76%));
+  background: linear-gradient(145deg, rgba(33, 33, 37, 0.84), rgba(7, 7, 7, 0.76));
 }
 
 .timeline-marker {
@@ -97,7 +97,7 @@ const markers = ['gold', 'blue']
   left: -34px;
   width: 14px;
   aspect-ratio: 1;
-  border: 3px solid #0c1024;
+  border: 3px solid #101114;
   border-radius: 50%;
 }
 

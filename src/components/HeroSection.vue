@@ -1,38 +1,45 @@
 <script setup>
-import { ArrowDown, ArrowRight } from '@lucide/vue'
+import { ArrowRight } from '@lucide/vue'
+
+defineProps({
+  presentation: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+defineEmits(['continue'])
 </script>
 
 <template>
-  <section id="inicio" class="hero-section star-field">
-    <img
-      class="hero-image"
-      src="https://images.pexels.com/photos/956999/milky-way-starry-sky-night-sky-star-956999.jpeg?auto=compress&cs=tinysrgb&w=1920"
-      alt="Via Láctea atravessando um céu estrelado."
-      fetchpriority="high"
-    />
+  <section id="inicio" :class="['hero-section', { 'is-presentation': presentation }]">
     <div class="hero-shade" aria-hidden="true"></div>
     <div class="hero-orbit hero-orbit-large" aria-hidden="true"></div>
     <div class="hero-orbit hero-orbit-small" aria-hidden="true"></div>
     <span class="orbit-signal" aria-hidden="true"></span>
 
     <div class="hero-content page-container">
-      <p class="eyebrow hero-eyebrow">Desenvolvedora web <span>·</span> portfólio</p>
       <h1>Construo experiências digitais com clareza, intenção e código.</h1>
       <p class="hero-description">
         Sou Thayane Nascimento, desenvolvedora web focada em transformar necessidades reais em
         produtos digitais sólidos, acessíveis e memoráveis.
       </p>
       <div class="hero-actions">
-        <a class="button button-primary" href="#projetos">
+        <button
+          v-if="presentation"
+          class="button button-primary"
+          type="button"
+          @click="$emit('continue')"
+        >
+          Continuar <ArrowRight :size="17" aria-hidden="true" />
+        </button>
+        <template v-else>
+          <a class="button button-primary" href="#projetos">
           Ver projetos <ArrowRight :size="17" aria-hidden="true" />
-        </a>
-        <a class="button button-secondary" href="#contato">Vamos conversar</a>
+          </a>
+          <a class="button button-secondary" href="#contato">Vamos conversar</a>
+        </template>
       </div>
-      <a class="scroll-hint" href="#apresentacao">
-        <span class="scroll-line" aria-hidden="true"></span>
-        <span>Explore minha órbita profissional</span>
-        <ArrowDown :size="14" aria-hidden="true" />
-      </a>
     </div>
   </section>
 </template>
@@ -48,7 +55,12 @@ import { ArrowDown, ArrowRight } from '@lucide/vue'
   isolation: isolate;
 }
 
-.hero-image,
+.hero-section.is-presentation {
+  height: 100vh;
+  min-height: 100vh;
+  padding: 84px 0 32px;
+}
+
 .hero-shade {
   position: absolute;
   z-index: -2;
@@ -57,40 +69,12 @@ import { ArrowDown, ArrowRight } from '@lucide/vue'
   height: 100%;
 }
 
-.hero-image {
-  object-fit: cover;
-  object-position: center 45%;
-  opacity: 0.42;
-  animation: image-arrive 1.2s ease both;
-}
-
 .hero-shade {
   z-index: -1;
   background:
-    radial-gradient(ellipse at 78% 38%, rgb(43 83 155 / 22%), transparent 38%),
-    linear-gradient(90deg, #080a18 6%, rgb(8 10 24 / 88%) 43%, rgb(8 10 24 / 30%) 100%),
-    linear-gradient(0deg, #080a18 0%, transparent 32%);
-}
-
-.star-field::before,
-.star-field::after {
-  position: absolute;
-  z-index: -1;
-  inset: 0;
-  background-image:
-    radial-gradient(circle at 12% 18%, #fff 0 1px, transparent 1.8px),
-    radial-gradient(circle at 80% 14%, #b8c9ff 0 1px, transparent 1.8px),
-    radial-gradient(circle at 66% 46%, #fff 0 1px, transparent 1.6px),
-    radial-gradient(circle at 25% 70%, #8bbcff 0 1px, transparent 1.8px),
-    radial-gradient(circle at 90% 75%, #fff 0 1px, transparent 1.6px),
-    radial-gradient(circle at 42% 32%, #c5b6ff 0 1px, transparent 1.8px);
-  content: '';
-  pointer-events: none;
-}
-
-.star-field::after {
-  opacity: 0.55;
-  transform: translateY(18px);
+    radial-gradient(ellipse at 78% 38%, rgb(102 110 128 / 12%), transparent 38%),
+    linear-gradient(90deg, rgb(9 10 12 / 84%) 6%, rgb(9 10 12 / 56%) 43%, rgb(9 10 12 / 12%) 100%),
+    linear-gradient(0deg, rgb(9 10 12 / 54%) 0%, transparent 32%);
 }
 
 .hero-content {
@@ -233,11 +217,6 @@ h1 {
   box-shadow: 0 0 18px var(--color-signal);
 }
 
-@keyframes image-arrive {
-  from { opacity: 0; transform: scale(1.05); }
-  to { opacity: 0.42; transform: scale(1); }
-}
-
 @keyframes content-arrive {
   from { opacity: 0; transform: translateY(18px); }
   to { opacity: 1; transform: translateY(0); }
@@ -247,6 +226,12 @@ h1 {
   .hero-section {
     min-height: 760px;
     min-height: max(760px, 100svh);
+  }
+
+  .hero-section.is-presentation {
+    height: 100vh;
+    min-height: 100vh;
+    padding: 24px 0;
   }
 
   h1 {
@@ -277,7 +262,6 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-image,
   .hero-content {
     animation: none;
   }

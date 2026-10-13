@@ -88,7 +88,7 @@ function submitContact() {
 <style scoped>
 .contact-section {
   border-top: 1px solid var(--color-line);
-  background: #0d1128;
+  background: rgb(16 17 20 / 90%);
 }
 
 .contact-grid {
@@ -135,7 +135,7 @@ function submitContact() {
   padding: clamp(22px, 4vw, 36px);
   border: 1px solid var(--color-line);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgb(24 29 59 / 84%), rgb(13 16 37 / 76%));
+    background: linear-gradient(145deg, rgba(33, 33, 37, 0.84), rgba(7, 7, 7, 0.76));
   box-shadow: 0 18px 60px rgb(0 0 0 / 20%);
 }
 
@@ -157,7 +157,7 @@ function submitContact() {
   padding: 12px 14px;
   border: 1px solid rgb(172 184 255 / 20%);
   border-radius: 5px;
-  background: #090c1d;
+  background: #131416;
   color: white;
   font: inherit;
   resize: vertical;
@@ -178,6 +178,13 @@ function submitContact() {
 .submit-button {
   justify-self: start;
   cursor: pointer;
+  background: var(--color-signal);
+  padding: 12px 20px;
+  border-radius: 5px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .form-status {

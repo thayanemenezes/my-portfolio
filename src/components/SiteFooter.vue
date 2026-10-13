@@ -10,9 +10,11 @@
 
 <style scoped>
 .site-footer {
+  position: relative;
+  z-index: 1;
   padding: 22px 0;
   border-top: 1px solid var(--color-line);
-  background: var(--color-ink);
+  background: rgb(9 10 12 / 92%);
 }
 
 .footer-content {

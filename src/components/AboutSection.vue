@@ -1,11 +1,23 @@
 <script setup>
 import { ArrowUpRight } from '@lucide/vue'
 
+defineProps({
+  presentation: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+defineEmits(['continue'])
+
 const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX orientada a produto']
 </script>
 
 <template>
-  <section id="apresentacao" class="about-section section-orbit section-space">
+  <section
+    id="apresentacao"
+    :class="['about-section', 'section-orbit', 'section-space', { 'is-presentation': presentation }]"
+  >
     <div class="page-container about-grid">
       <div class="about-visual">
         <div class="visual-frame" aria-hidden="true"></div>
@@ -37,7 +49,15 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
             <li v-for="technology in technologies" :key="technology">{{ technology }}</li>
           </ul>
         </div>
-        <a class="text-link" href="#projetos">
+        <button
+          v-if="presentation"
+          class="flow-continue"
+          type="button"
+          @click="$emit('continue')"
+        >
+          Continuar <ArrowUpRight :size="16" aria-hidden="true" />
+        </button>
+        <a v-else class="text-link" href="#projetos">
           Conheça meus projetos <ArrowUpRight :size="16" aria-hidden="true" />
         </a>
       </div>
@@ -48,6 +68,10 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
 <style scoped>
 .about-section {
   position: relative;
+}
+
+.about-section.is-presentation {
+  min-height: 100vh;
 }
 
 .about-grid {
@@ -168,6 +192,32 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
   color: var(--color-signal);
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+.flow-continue {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 28px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-violet);
+  box-shadow: 0 0 30px rgb(123 92 246 / 26%);
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.flow-continue:hover {
+  transform: translateY(-2px);
+  background: #876cf0;
 }
 
 @media (max-width: 800px) {

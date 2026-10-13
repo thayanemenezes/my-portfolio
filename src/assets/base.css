@@ -1,13 +1,14 @@
 :root {
   font-family: 'DM Sans', sans-serif;
   color: #f3f5ff;
-  background: #080a18;
+  background: #090a0c;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
-  --color-ink: #080a18;
+  --color-background: rgba(7, 7, 7, 0.88);
+  --color-ink: #0b0c0d;
   --color-text: #f3f5ff;
   --color-muted: #aeb6d8;
   --color-muted-light: #d4daf5;
@@ -35,7 +36,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
   margin: 0;
-  background: var(--color-ink);
+  background: #090a0c;
   color: var(--color-text);
   font-size: 16px;
   line-height: 1.6;

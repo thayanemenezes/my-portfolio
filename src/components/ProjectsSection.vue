@@ -4,6 +4,15 @@ import { ArrowUpRight } from '@lucide/vue'
 import { projects } from '../data/portfolio.js'
 import ProjectCaseStudy from './ProjectCaseStudy.vue'
 
+defineProps({
+  presentation: {
+    type: Boolean,
+    default: false,
+  },
+})
+
+defineEmits(['continue'])
+
 const filters = [
   { label: 'Todos', value: 'all' },
   { label: 'Web', value: 'web' },
@@ -76,6 +85,11 @@ function closeProject() {
           </div>
         </article>
       </div>
+      <div v-if="presentation" class="projects-continue">
+        <button class="flow-continue" type="button" @click="$emit('continue')">
+          Continuar <ArrowUpRight :size="17" aria-hidden="true" />
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -147,11 +161,42 @@ function closeProject() {
   margin-top: 42px;
 }
 
+.projects-continue {
+  display: flex;
+  justify-content: center;
+  margin-top: 42px;
+}
+
+.flow-continue {
+  display: inline-flex;
+  min-height: 48px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 20px;
+  border: 0;
+  border-radius: 6px;
+  background: var(--color-violet);
+  box-shadow: 0 0 30px rgb(123 92 246 / 26%);
+  color: white;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.flow-continue:hover {
+  transform: translateY(-2px);
+  background: #876cf0;
+}
+
 .project-card {
   overflow: hidden;
-  border: 1px solid var(--color-line);
+ 
   border-radius: 8px;
-  background: linear-gradient(145deg, rgb(24 29 59 / 84%), rgb(13 16 37 / 76%));
+    background: linear-gradient(145deg, rgba(33, 33, 37, 0.903), rgba(7, 7, 7, 0.936));
   transition:
     transform 220ms ease,
     border-color 220ms ease,
