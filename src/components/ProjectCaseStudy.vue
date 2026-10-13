@@ -66,7 +66,7 @@ defineEmits(['back'])
   padding: 0 14px;
   border: 1px solid var(--color-line);
   border-radius: 5px;
-  background: rgb(13 17 40 / 55%);
+  background: rgb(9 10 12 / 82%);
   color: #e4e8ff;
   cursor: pointer;
 }
@@ -75,7 +75,7 @@ defineEmits(['back'])
   overflow: hidden;
   border: 1px solid var(--color-line);
   border-radius: 8px;
-  background: linear-gradient(145deg, rgb(24 29 59 / 84%), rgb(13 16 37 / 76%));
+  background: rgb(9 10 12 / 82%);
 }
 
 .case-cover {

@@ -74,6 +74,24 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
   min-height: 100vh;
 }
 
+.about-copy {
+  position: relative;
+  isolation: isolate;
+}
+
+.about-copy::before {
+  position: absolute;
+  z-index: -1;
+  inset: -18px -22px;
+ 
+  border-radius: 10px;
+  background: rgb(9 10 12 / 82%);
+  box-shadow: 0 18px 54px rgb(0 0 0 / 22%);
+  backdrop-filter: blur(18px);
+  content: '';
+  pointer-events: none;
+}
+
 .about-grid {
   display: grid;
   align-items: center;

@@ -88,7 +88,8 @@ const markers = ['gold', 'blue']
   padding: clamp(22px, 4vw, 34px);
   
   border-radius: 8px;
-  background: linear-gradient(145deg, rgba(33, 33, 37, 0.84), rgba(7, 7, 7, 0.76));
+  background: rgb(9 10 12 / 82%);
+
 }
 
 .timeline-marker {

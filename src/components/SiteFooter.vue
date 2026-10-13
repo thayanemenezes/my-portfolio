@@ -2,7 +2,7 @@
   <footer class="site-footer">
     <div class="page-container footer-content">
       <p>© {{ new Date().getFullYear() }} Thayane Nascimento</p>
-      <p>Desenvolvido com intenção e curiosidade.</p>
+    
       <a href="#inicio">Voltar ao início ↑</a>
     </div>
   </footer>

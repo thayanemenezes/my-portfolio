@@ -194,9 +194,8 @@ function closeProject() {
 
 .project-card {
   overflow: hidden;
- 
   border-radius: 8px;
-    background: linear-gradient(145deg, rgba(33, 33, 37, 0.903), rgba(7, 7, 7, 0.936));
+  background: rgb(9 10 12 / 82%);
   transition:
     transform 220ms ease,
     border-color 220ms ease,

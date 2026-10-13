@@ -133,9 +133,8 @@ function submitContact() {
   display: grid;
   gap: 20px;
   padding: clamp(22px, 4vw, 36px);
-  border: 1px solid var(--color-line);
   border-radius: 8px;
-    background: linear-gradient(145deg, rgba(33, 33, 37, 0.84), rgba(7, 7, 7, 0.76));
+  background: rgb(9 10 12 / 82%);
   box-shadow: 0 18px 60px rgb(0 0 0 / 20%);
 }
 

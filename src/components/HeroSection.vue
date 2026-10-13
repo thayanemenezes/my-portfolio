@@ -158,7 +158,7 @@ h1 {
 
 .button-secondary {
   border-color: rgb(201 213 255 / 30%);
-  background: rgb(13 17 40 / 55%);
+  background: rgb(9 10 12 / 82%);
   color: #f4f5ff;
 }
 
