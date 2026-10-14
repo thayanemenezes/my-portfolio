@@ -53,8 +53,7 @@ function closeProject() {
           <p class="eyebrow">03 / Projetos selecionados</p>
           <h2>Projetos com contexto, escolhas e resultado.</h2>
           <p class="section-intro">
-            Exemplos provisórios de como apresentar trabalhos profissionais. Cada projeto pode
-            reunir o desafio, o papel desempenhado, a stack e os aprendizados que geraram impacto.
+        
           </p>
         </div>
         <div class="filter-group" role="group" aria-label="Filtrar projetos">

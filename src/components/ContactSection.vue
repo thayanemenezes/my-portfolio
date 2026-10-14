@@ -30,10 +30,10 @@ function submitContact() {
         </p>
         <div class="social-links">
           <a :href="contact.github" target="_blank" rel="noopener noreferrer">
-            <CodeXml :size="19" aria-hidden="true" /> GitHub — substituir link
+            <CodeXml :size="19" aria-hidden="true" /> GitHub
           </a>
           <a :href="contact.linkedin" target="_blank" rel="noopener noreferrer">
-            <BriefcaseBusiness :size="19" aria-hidden="true" /> LinkedIn — substituir link
+            <BriefcaseBusiness :size="19" aria-hidden="true" /> LinkedIn
           </a>
           <a :href="`mailto:${contact.email}`">
             <Mail :size="19" aria-hidden="true" /> {{ contact.email }}

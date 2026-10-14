@@ -9,10 +9,9 @@ const markers = ['gold', 'blue']
     <div class="page-container">
       <div class="section-heading">
         <p class="eyebrow">02 / Experiências</p>
-        <h2>Experiência que ganha forma em entregas.</h2>
+        <h2>Caminhos que me trouxeram até aqui</h2>
         <p class="section-intro">
-          Os exemplos abaixo são provisórios. Substitua-os por experiências, responsabilidades e
-          resultados reais da sua trajetória.
+          Experiências que me ensinaram a olhar além do código e a encontrar novas possibilidades para cada produto.
         </p>
       </div>
 
@@ -46,13 +45,13 @@ const markers = ['gold', 'blue']
 }
 
 .section-heading {
-  max-width: 720px;
+  max-width: 680px;
 }
 
 .section-heading h2 {
   margin-top: 16px;
   color: var(--color-text);
-  font-size: clamp(2rem, 4vw, 3.15rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.12;

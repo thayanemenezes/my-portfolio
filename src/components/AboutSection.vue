@@ -27,15 +27,12 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
         <p class="eyebrow">01 / Quem sou eu</p>
         <h3>Tecnologia para inovar e criar</h3>
         <p>
-          Desde criança, a tecnologia sempre foi algo que me despertou curiosidade. Ao ganhar meu primeiro computador, na época da internet discada, fiquei fascinada com a forma que
-          aquelas máquinas conseguiam conectar pessoas, ideias e informações.  
+          Desde criança, a tecnologia sempre despertou minha curiosidade. Quando ganhei meu primeiro computador, na época da internet discada, fiquei fascinada com a forma como aquelas máquinas conseguiam conectar pessoas, ideias e informações.  
         </p>
         <p>
-          Em 2017, entrei no mundo da programação, e encontrei a mesma sensação de encantamento que sentia ao navegar noites e noites na internet quando criança, mas agora, eu era capaz de entender e criar os sistemas que um dia me fascinaram.  
+Em 2017, entrei no mundo da programação e reencontrei aquela mesma sensação de encantamento que sentia ao passar noites navegando na internet. A diferença é que, dessa vez, eu podia entender como tudo aquilo funcionava e, mais do que isso, criar meus próprios sistemas.
         </p>
-        <p> Em 2019,  
-          Gosto de entender o que pode ser melhor, enxergar o que está além da minha atuação, questionar o que já existe e construir soluções que levam produtos e
-          equipes a um novo patamar.
+        <p> Em 2019, comecei minha trajetória profissional com um estágio como técnica de informática. Alguns meses depois, passei a atuar como designer até conquistar minha primeira oportunidade como desenvolvedora full-stack. Desde então, trabalhei em projetos de diferentes áreas, como e-commerce, setor automobilístico, saúde e educação, sempre buscando formas de criar, aprimorar e evoluir produtos.
         </p>
         <button v-if="presentation" class="flow-continue" type="button" @click="$emit('continue')">
           Continuar
