@@ -10,56 +10,37 @@ defineProps({
 
 defineEmits(['continue'])
 
-const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX orientada a produto']
+const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX orientada a produto', 'Next.js']
 </script>
 
 <template>
-  <section
-    id="apresentacao"
-    :class="['about-section', 'section-orbit', 'section-space', { 'is-presentation': presentation }]"
-  >
+  <section id="apresentacao"
+    :class="['about-section', 'section-orbit', 'section-space', { 'is-presentation': presentation }]">
     <div class="page-container about-grid">
       <div class="about-visual">
         <div class="visual-frame" aria-hidden="true"></div>
-        <img
-          class="about-image"
-          src="../assets/thayane.png"
-          alt="Profissional de tecnologia trabalhando em frente a dois monitores."
-          loading="lazy"
-        />
+        <img class="about-image" src="../assets/thayane.png"
+          alt="Profissional de tecnologia trabalhando em frente a dois monitores." loading="lazy" />
       </div>
 
       <div class="about-copy">
-        <p class="eyebrow">01 / Apresentação</p>
-        <h2>Do contexto ao produto: desenvolvimento com visão de ponta a ponta.</h2>
+        <p class="eyebrow">01 / Quem sou eu</p>
+        <h3>Tecnologia para inovar e criar</h3>
         <p>
-          Minha atuação conecta experiência de usuário, lógica de negócio e desenvolvimento
-          front-end. Gosto de entender o problema antes de definir a interface, criando soluções
-          claras para quem usa e sustentáveis para quem mantém.
+          Desde criança, a tecnologia sempre foi algo que me despertou curiosidade. Ao ganhar meu primeiro computador, na época da internet discada, fiquei fascinada com a forma que
+          aquelas máquinas conseguiam conectar pessoas, ideias e informações.  
         </p>
         <p>
-          Trabalho de forma colaborativa, com comunicação objetiva, atenção aos detalhes e decisões
-          técnicas guiadas por impacto. Cada projeto é uma oportunidade de unir performance,
-          acessibilidade e uma presença visual consistente.
+          Em 2017, entrei no mundo da programação, e encontrei a mesma sensação de encantamento que sentia ao navegar noites e noites na internet quando criança, mas agora, eu era capaz de entender e criar os sistemas que um dia me fascinaram.  
         </p>
-
-        <div class="technology-block">
-          <h3>Tecnologias principais</h3>
-          <ul class="technology-list" aria-label="Tecnologias principais">
-            <li v-for="technology in technologies" :key="technology">{{ technology }}</li>
-          </ul>
-        </div>
-        <button
-          v-if="presentation"
-          class="flow-continue"
-          type="button"
-          @click="$emit('continue')"
-        >
-          Continuar <ArrowUpRight :size="16" aria-hidden="true" />
+        <p> Em 2019,  
+          Gosto de entender o que pode ser melhor, enxergar o que está além da minha atuação, questionar o que já existe e construir soluções que levam produtos e
+          equipes a um novo patamar.
+        </p>
+        <button v-if="presentation" class="flow-continue" type="button" @click="$emit('continue')">
+          Continuar
+          <ArrowUpRight :size="16" aria-hidden="true" />
         </button>
-        <a v-else class="text-link" href="#projetos">
-          Conheça meus projetos <ArrowUpRight :size="16" aria-hidden="true" />
-        </a>
       </div>
     </div>
   </section>
@@ -83,7 +64,7 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
   position: absolute;
   z-index: -1;
   inset: -18px -22px;
- 
+
   border-radius: 10px;
   background: rgb(9 10 12 / 82%);
   box-shadow: 0 18px 54px rgb(0 0 0 / 22%);
@@ -150,25 +131,25 @@ const technologies = ['JavaScript', 'React', 'TypeScript', 'HTML & CSS', 'UX ori
   line-height: 1.4;
 }
 
-.about-copy h2,
-.section-heading h2,
-.contact-copy h2 {
+.about-copy h3,
+.section-heading h3,
+.contact-copy h3 {
   margin-top: 16px;
   color: var(--color-text);
-  font-size: clamp(2rem, 4vw, 3.15rem);
+  font-size: clamp(1.85rem, 4vw, 2.5rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 1.12;
 }
 
-.about-copy > p:not(.eyebrow) {
+.about-copy>p:not(.eyebrow) {
   max-width: 660px;
   margin-top: 22px;
   color: var(--color-muted-light);
   line-height: 1.75;
 }
 
-.about-copy > p + p:not(.eyebrow) {
+.about-copy>p+p:not(.eyebrow) {
   margin-top: 14px;
 }
 

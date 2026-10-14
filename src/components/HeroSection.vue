@@ -19,11 +19,9 @@ defineEmits(['continue'])
     <span class="orbit-signal" aria-hidden="true"></span>
 
     <div class="hero-content page-container">
-      <h1>Construo experiências digitais com clareza, intenção e código.</h1>
+      <h1>No universo, as conexões revelam padrões. <br/>  Na tecnologia, criam possibilidades.</h1>
       <p class="hero-description">
-        Sou Thayane Nascimento, desenvolvedora web focada em transformar necessidades reais em
-        produtos digitais sólidos, acessíveis e memoráveis.
-      </p>
+Sou engenheira de software e gosto de entender problemas, explorar possibilidades e transformar ideias em soluções digitais úteis e feitas para evoluir.      </p>
       <div class="hero-actions">
         <button
           v-if="presentation"
@@ -111,10 +109,10 @@ h1 {
 }
 
 .hero-description {
-  max-width: 620px;
+  max-width: 600px;
   margin-top: 28px;
   color: #d4daf5;
-  font-size: clamp(1.05rem, 1.7vw, 1.2rem);
+  font-size: clamp(1.2rem, 1.5vw, 1.25rem);
   line-height: 1.65;
 }
 

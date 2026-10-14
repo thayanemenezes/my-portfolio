@@ -8,6 +8,7 @@ import ProjectsSection from './components/ProjectsSection.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import SiteHeader from './components/SiteHeader.vue'
 import StarBackground from './components/StarBackground.vue'
+import TechnologySection from './components/TechnologySection.vue'
 
 const scrollProgress = ref(0)
 const presentationStage = ref('hero')
@@ -97,6 +98,7 @@ onUnmounted(() => window.removeEventListener('scroll', updateScrollProgress))
         <HeroSection />
         <AboutSection />
         <ExperienceSection />
+        <TechnologySection />
         <ProjectsSection />
         <ContactSection />
       </template>

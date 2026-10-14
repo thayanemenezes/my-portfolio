@@ -37,7 +37,7 @@ onUnmounted(() => observer?.disconnect())
   <header class="site-header">
     <nav class="site-nav page-container" aria-label="Navegação principal">
       <a class="brand" href="#inicio" @click="closeMenu">
-        <span class="brand-mark" aria-hidden="true">✦</span>
+        <img src="/logo.png" alt="Logo" class="brand-image" />
         <span>Thayane Nascimento</span>
       </a>
 
@@ -80,6 +80,11 @@ onUnmounted(() => observer?.disconnect())
 </template>
 
 <style scoped>
+.brand-image{
+  width: 40px;
+  height: 40px;
+}
+
 .site-header {
   position: fixed;
   z-index: 50;
