@@ -13,6 +13,13 @@ const markers = ['gold', 'blue']
         <p class="section-intro">
           Experiências que me ensinaram a olhar além do código e a encontrar novas possibilidades para cada produto.
         </p>
+        <a
+          class="resume-download"
+          href="/THAYANE%20-%20RESUME.pdf"
+          download="Thayane-Nascimento-Curriculo.pdf"
+        >
+          Baixar currículo completo
+        </a>
       </div>
 
       <div class="experience-list">
@@ -24,7 +31,6 @@ const markers = ['gold', 'blue']
           <span :class="['timeline-marker', markers[index % markers.length]]" aria-hidden="true"></span>
           <div class="experience-topline">
             <div>
-              <span class="placeholder-label">Conteúdo provisório — substituir</span>
               <h3>{{ experience.role }}</h3>
               <p class="company-name">{{ experience.company }}</p>
             </div>
@@ -61,6 +67,34 @@ const markers = ['gold', 'blue']
   margin-top: 18px;
   color: var(--color-muted-light);
   line-height: 1.7;
+}
+
+.resume-download {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 24px;
+  padding: 0 18px;
+  border: 1px solid var(--color-violet);
+  border-radius: 6px;
+  background: var(--color-violet);
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition:
+    transform 180ms ease,
+    background-color 180ms ease;
+}
+
+.resume-download:hover {
+  transform: translateY(-2px);
+  background: #876cf0;
+}
+
+.resume-download:focus-visible {
+  outline: 2px solid var(--color-signal);
+  outline-offset: 3px;
 }
 
 .experience-list {
@@ -117,20 +151,7 @@ const markers = ['gold', 'blue']
   gap: 16px;
 }
 
-.placeholder-label {
-  display: inline-block;
-  padding: 5px 8px;
-  border: 1px solid rgb(160 179 255 / 24%);
-  border-radius: 3px;
-  color: #d9d3ff;
-  font-family: var(--font-mono);
-  font-size: 0.62rem;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 .experience-card h3 {
-  margin-top: 15px;
   color: var(--color-text);
   font-size: 1.2rem;
   font-weight: 700;

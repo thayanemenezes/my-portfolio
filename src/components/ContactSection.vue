@@ -50,6 +50,7 @@ function submitContact() {
             autocomplete="name"
             name="name"
             placeholder="Como posso te chamar?"
+            
             required
           />
         </div>

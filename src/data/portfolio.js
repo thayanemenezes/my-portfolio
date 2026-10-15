@@ -1,19 +1,21 @@
 export const experiences = [
   {
-    role: '[Cargo / função]',
-    company: '[Empresa ou projeto]',
-    period: '[Período]',
+    role: 'Frontend Developer',
+    company: 'EADSKILL',
+    period: 'Mai/2025 - Set/2026',
     description:
-      '[Descreva as responsabilidades, o escopo de atuação e as decisões importantes deste trabalho.]',
-    result: '[Resultado ou impacto mensurável / qualitativo a inserir]',
+      'Evoluí uma plataforma SaaS multi-tenant de cursos com IA, transformando um MVP limitado em uma solução interativa para criação e edição de conteúdo multimídia.',
+    result:
+      'Implementei fluxos com IA, edição colaborativa em tempo real e exportação SCORM/PDF para distribuição dos cursos.',
   },
   {
-    role: '[Cargo / função]',
-    company: '[Empresa ou projeto]',
-    period: '[Período]',
+    role: 'Full Stack Developer',
+    company: 'Solution4Fleet',
+    period: 'Jan/2023 - Jul/2025',
     description:
-      '[Descreva os desafios, a colaboração com o time e as entregas realizadas.]',
-    result: '[Resultado ou aprendizado relevante a inserir]',
+      'Atuei na evolução de soluções digitais para franquias, liderando a migração de uma aplicação de PHP/Laravel para React e Next.js e desenvolvendo recursos white-label, gestão de leads e APIs.',
+    result:
+      'Modernizei a plataforma e o site corporativo, com melhorias de desempenho e SEO; também apoiei decisões técnicas e mentorei uma equipe de frontend.',
   },
 ]
 

@@ -51,9 +51,8 @@ function closeProject() {
       <div class="projects-heading">
         <div class="section-heading">
           <p class="eyebrow">03 / Projetos selecionados</p>
-          <h2>Projetos com contexto, escolhas e resultado.</h2>
+          <h2>Projetos</h2>
           <p class="section-intro">
-        
           </p>
         </div>
         <div class="filter-group" role="group" aria-label="Filtrar projetos">
@@ -69,7 +68,6 @@ function closeProject() {
           </button>
         </div>
       </div>
-
       <div class="project-grid" aria-live="polite">
         <article v-for="project in visibleProjects" :key="project.id" class="project-card">
           <img :src="project.image" :alt="project.imageAlt" loading="lazy" />
